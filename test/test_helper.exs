@@ -11,12 +11,12 @@ Code.load_file("test/support/test_repo.exs")
 defmodule MachineryTest.Helper do
   import ExUnit.CaptureLog
 
+  alias MachineryTest.TestRepo
   alias MachineryTest.TestStateMachine
   alias MachineryTest.TestStruct
-  alias MachineryTest.TestRepo
 
   @doc false
-  def mahcinery_interface(enable \\ true) do
+  def machinery_interface(enable \\ true) do
     Application.put_env(:machinery, :module, TestStateMachine)
     Application.put_env(:machinery, :model, TestStruct)
     Application.put_env(:machinery, :repo, TestRepo)
@@ -37,7 +37,7 @@ defmodule MachineryTest.Helper do
 
     receive do
       _ ->
-        :timer.sleep(1500)
+        :timer.sleep(5)
         Application.start(:machinery)
     end
   end

@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/joaomdmoura/machinery.svg?branch=master)](https://travis-ci.org/joaomdmoura/machinery)
 [![Ebert](https://ebertapp.io/github/joaomdmoura/machinery.svg)](https://ebertapp.io/github/joaomdmoura/machinery)
+[![Coverage Status](https://coveralls.io/repos/github/joaomdmoura/machinery/badge.svg?branch=master)](https://coveralls.io/github/joaomdmoura/machinery?branch=master)
 
 ![Machinery](https://github.com/joaomdmoura/machinery/blob/master/logo.png)
 
@@ -90,7 +91,7 @@ defmodule YourProject.UserStateMachine do
     transitions: %{
       "created" =>  ["partial", "complete"],
       "partial" => "completed",
-      "*" => "canceled
+      "*" => "canceled"
     }
 end
 ```
@@ -236,7 +237,7 @@ config :machinery,
 ```
 
 That's it, now you can start you Phoenix app and navigates
-to `http://localhost:4000/machinery`, or whatever custou routes you have mounted
+to `http://localhost:4000/machinery`, or whatever custom routes you have mounted
 the dashboard at.
 
 ## Guard functions
